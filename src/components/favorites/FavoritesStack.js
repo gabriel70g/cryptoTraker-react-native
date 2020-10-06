@@ -1,12 +1,11 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import CoinsScreen from './CoinsScreen';
-import CoinDetailScreen from 'cryptoTraker/src/components/coinDetails/CoinDetailScreen';
+import FavoritesScreen from './FavoritesScreen';
 import colors from 'cryptoTraker/src/res/colors';
 
 const Stack = createStackNavigator();
 
-const CoinsStack = () => {
+const FavoritesStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -15,12 +14,10 @@ const CoinsStack = () => {
           shadowColor: colors.blackPearl,
         },
         headerTintColor: colors.white,
-      }}
-      >
-      <Stack.Screen name="Coins" component={CoinsScreen} />
-      <Stack.Screen name="CoinDetail" component={CoinDetailScreen} />
+      }}>
+      <Stack.Screen name="Favorites" component={FavoritesScreen} />
     </Stack.Navigator>
   );
 };
 
-export default CoinsStack;
+export default FavoritesStack;
